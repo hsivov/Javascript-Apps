@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;  
+}
+
+body {
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: #2c4477;
+    /* color: #274730; */
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-top: 7rem;
+    font-weight: bold;
+}
+
+.countdown-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.large-text{
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.timerEl{
+    text-align: center;
+}
+
+.timerEl span{
+    font-size: 1.5rem;
+}
