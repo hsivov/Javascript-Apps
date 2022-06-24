@@ -1,4 +1,4 @@
-const APIURL = 'https://api.themoviedb.org/3/movie/popular?api_key=a211128ffb2017323a82d7318992da84';
+const APIURL = 'https://api.themoviedb.org/3/movie/popular?api_key=a211128ffb2017323a82d7318992da84&page=1';
 
 const IMGPATH = 'https://image.tmdb.org/t/p/w1280'
 
