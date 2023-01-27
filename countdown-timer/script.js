@@ -1,4 +1,4 @@
-const worldCup = "21 Nov 2022 12:00"
+const eventDateString = "22 May 2023 10:00"
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -6,10 +6,10 @@ const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
 function countdownTimer(){
-    const worldCupDate = new Date(worldCup);
+    const eventDate = new Date(eventDateString);
     const currentDate = new Date();
 
-    const totalSeconds = (worldCupDate - currentDate) / 1000;
+    const totalSeconds = (eventDate - currentDate) / 1000;
 
     const days = Math.floor(totalSeconds / 3600 / 24);
     const hours = Math.floor(totalSeconds / 3600) % 24;
