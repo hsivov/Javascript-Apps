@@ -1,2 +1,2 @@
-# Javascript-Practice
+# Javascript-Projects
 Simple web single page apps.
