@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search GitHub User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <img src="github-mark/github-mark.png" alt="GitHub Logo" />
+        <h1>GitHub User Finder</h1>
+        <input id="search-input" type="text">
+        <button id="search-btn">Search</button>
+        <article>
+            <div class="container">
+
+            </div>
+        </article>
+    </main>
+    <script type="text/javascript">
+
+        const searchBtn = document.getElementById('search-btn');
+        const URL = 'https://api.github.com/search/users';
+        const container = Array.from(document.getElementsByClassName('container'))[0];
+
+        searchBtn.addEventListener('click', searchHandler);
+
+        async function searchHandler() {
+            //clear container
+            container.innerHTML = '';
+            const input = document.getElementById('search-input').value;
+            const response = await fetch(`${URL}?q=${input}&type=user`);
+            const data = await response.json();
+
+            data.items.forEach(user => {
+                const { avatar_url, login, html_url } = user;
+
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                    <img src="${avatar_url}" alt="Avatar">
+                    <p>${login}</p>
+                    <a href="${html_url}">View Profile</a>
+                `
+                container.appendChild(card);
+            });
+        }
+    </script>
+</body>
+
+</html>
