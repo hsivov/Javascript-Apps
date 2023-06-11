@@ -1,2 +1,2 @@
-# Javascript-Projects
+# Javascript Applications
 Single page apps.
